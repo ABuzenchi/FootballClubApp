@@ -6,7 +6,7 @@
     "number": 7,
     "nationality": "Portuguese",
     "currentTeam": "Al Nassr",
-    "imageUrl": "https://example.com/ronaldo.jpg",
+    "imageUrl": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/10/06/10/Cristiano-Ronaldo.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
   },
   {
@@ -16,7 +16,95 @@
     "number": 10,
     "nationality": "Croatian",
     "currentTeam": "Real Madrid",
-    "imageUrl": "https://example.com/modric.jpg",
+    "imageUrl": "https://footballclub.ro/wp-content/uploads/luka-modric-croatia-mondial2022.jpg",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Luka_Modrić"
+  },
+
+  {
+    "id": 3,
+    "name": "Robert Lewandowski",
+    "position": "Striker",
+    "number": 9,
+    "nationality": "Polish",
+    "currentTeam": "Barcelona",
+    "imageUrl": "https://img.fcbayern.com/image/upload/f_auto/q_auto/t_cms-6x9-seo/v1641585912/cms/public/images/fcbayern-com/homepage/saison-21-22/Galerien/Spiele/FCB-BMG/07_FCBBMG_070122_DON.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Robert_Lewandowski"
+  },
+
+  {
+    "id": 4,
+    "name": "Neymar Júnior",
+    "position": "Left winger, attacking midfielder, forward",
+    "number": 10,
+    "nationality": "Brazilian",
+    "currentTeam": "Santos",
+    "imageUrl": "https://b.fssta.com/uploads/application/soccer/headshots/713.png",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Neymar"
+  },
+
+  {
+    "id": 5,
+    "name": "Lionel Messi",
+    "position": "Forward",
+    "number": 10,
+    "nationality": "Argentine",
+    "currentTeam": "Inter Miami",
+    "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Lionel_Messi"
+  },
+
+  {
+    "id": 6,
+    "name": "Harry Kane",
+    "position": "Striker",
+    "number": 9,
+    "nationality": "English",
+    "currentTeam": "Bayern Munich",
+    "imageUrl": "https://assets.bundesliga.com/player/dfl-obj-j00zz3-dfl-clu-00000g-dfl-sea-0001k8.png",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Harry_Kane"
+  },
+
+  {
+    "id": 7,
+    "name": "Erling Haaland",
+    "position": "Striker",
+    "number": 9,
+    "nationality": "Norwegian",
+    "currentTeam": "Manchester City",
+    "imageUrl": "https://cdn.vox-cdn.com/thumbor/Ek4l4CiUQo2ybRxX1WyEzsFXreY=/0x0:680x492/1200x800/filters:focal(281x98:389x206)/cdn.vox-cdn.com/uploads/chorus_image/image/70895603/hal.0.jpeg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Erling_Haaland"
+  },
+
+  {
+    "id": 8,
+    "name": "Lamine Yamal",
+    "position": "Winger",
+    "number": 19,
+    "nationality": "Spanish",
+    "currentTeam": "Barcelona",
+    "imageUrl": "https://tmssl.akamaized.net/images/foto/galerie/lamine-yamal-fc-barcelona-2024-25-1726577930-148299.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Lamine_Yamal"
+  },
+
+  {
+    "id": 9,
+    "name": "Kylian Mbappé",
+    "position": "Forward",
+    "number": 9,
+    "nationality": "French",
+    "currentTeam": "Real Madrid",
+    "imageUrl": "https://tmssl.akamaized.net/images/foto/galerie/kylian-mbappe-real-madrid-2024-25-presentation-1721130438-142555.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9l"
+  },
+
+  {
+    "id": 10,
+    "name": "Radu Drăgușin",
+    "position": "Defender",
+    "number": 6,
+    "nationality": "Romanian",
+    "currentTeam": "Tottenham Hotspur",
+    "imageUrl": "https://www.prosport.ro/wp-content/uploads/2024/07/Unde-va-juca-Radu-Dragusin-in-sezonul-viitor.-Chiar-fotbalistul-a-facut-anuntul-dupa-ce-a-intrat-in-direct-la-TV-scaled.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Radu_Dr%C4%83gu%C8%99in"
   }
 ]

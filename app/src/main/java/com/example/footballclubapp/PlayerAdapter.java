@@ -1,6 +1,7 @@
 package com.example.footballclubapp;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,11 +34,22 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
     @Override
     public void onBindViewHolder(@NonNull PlayerViewHolder holder, int position) {
         Player player = playerList.get(position);
+        Log.d("PLAYER", "Imagine: " + player.imageUrl);
         holder.nameText.setText(player.name);
         holder.positionText.setText(player.position + " - #" + player.number);
 
         // Imagine din link – folosim Glide (poți adăuga Glide în Gradle)
-        Glide.with(context).load(player.imageUrl).into(holder.imageView);
+        String imageUrl = player.imageUrl;
+
+        if (imageUrl == null || imageUrl.trim().isEmpty()) {
+            holder.imageView.setImageResource(R.drawable.ic_launcher_foreground); // imagine default
+        } else {
+            Glide.with(holder.itemView.getContext())
+                    .load(imageUrl)
+                    .placeholder(R.drawable.ic_launcher_foreground)
+                    .error(R.drawable.ic_launcher_foreground)
+                    .into(holder.imageView);
+        }
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, PlayerDetailActivity.class);
             intent.putExtra("player", player);
