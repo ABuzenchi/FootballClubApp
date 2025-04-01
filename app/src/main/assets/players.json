@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Cristiano Ronaldo",
+    "position": "Attack - Centre-Forward",
+    "number": 7,
+    "nationality": "Portuguese",
+    "currentTeam": "Al Nassr",
+    "imageUrl": "https://example.com/ronaldo.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo"
+  },
+  {
+    "id": 2,
+    "name": "Luka Modrić",
+    "position": "Midfielder",
+    "number": 10,
+    "nationality": "Croatian",
+    "currentTeam": "Real Madrid",
+    "imageUrl": "https://example.com/modric.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Luka_Modrić"
+  }
+]
