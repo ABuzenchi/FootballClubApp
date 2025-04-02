@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide;
 
 public class PlayerDetailActivity extends AppCompatActivity {
     private ImageView imageView;
-    private TextView nameText, positionText, nationalityText;
+    private TextView fullNameText, positionText, nationalityText, ageText, gamesText, goalsText, teamText;
     private Button buttonMoreDetails;
 
     @Override
@@ -22,23 +22,34 @@ public class PlayerDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_player_detail);
 
         imageView = findViewById(R.id.imagePlayerDetail);
-        nameText = findViewById(R.id.textNameDetail);
+        fullNameText = findViewById(R.id.textFullNameDetail);
         positionText = findViewById(R.id.textPositionDetail);
         nationalityText = findViewById(R.id.textNationalityDetail);
+        ageText = findViewById(R.id.textAgeDetail);
+        gamesText = findViewById(R.id.textGamesDetail);
+        goalsText = findViewById(R.id.textGoalsDetail);
+        teamText = findViewById(R.id.textTeamDetail);
+
+
         buttonMoreDetails = findViewById(R.id.buttonMoreDetails);
 
         Player player = (Player) getIntent().getSerializableExtra("player");
 
         if (player != null) {
-            nameText.setText(player.name);
-            positionText.setText(player.position + " - #" + player.number);
-            nationalityText.setText("Naționalitate: " + player.nationality);
+            TextView fullNameLabel = findViewById(R.id.textFullNameLabel);
+            fullNameText.setText(player.name);
+            positionText.setText(player.position);
+            ageText.setText(String.valueOf(player.age));
+            gamesText.setText(String.valueOf(player.games));
+            goalsText.setText(String.valueOf(player.goals));
+            teamText.setText(player.currentTeam);
+            nationalityText.setText(player.nationality);
+            fullNameLabel.setText(player.fullName);
 
             Glide.with(this).load(player.imageUrl).into(imageView);
 
             buttonMoreDetails.setOnClickListener(v -> {
-                Toast.makeText(PlayerDetailActivity.this, "Deschidem detalii extinse", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(PlayerDetailActivity.this, PlayerMoreDetailsActivity.class);
+                Intent intent = new Intent(this, PlayerMoreDetailsActivity.class);
                 intent.putExtra("player", player);
                 startActivity(intent);
             });
