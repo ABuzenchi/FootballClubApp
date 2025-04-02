@@ -20,6 +20,8 @@ import java.io.OutputStream;
 public class AddEditPlayerActivity extends AppCompatActivity {
 
     private EditText editName, editPosition, editNumber, editNationality, editTeam, editImageUrl, editWikiUrl;
+    private EditText editFullName, editAge, editGames, editGoals, editFoot, editShooting, editPassing, editDribbling, editPhysicality;
+
     private int editingPosition = -1;
     private Player existingPlayer = null;
 
@@ -42,13 +44,12 @@ public class AddEditPlayerActivity extends AppCompatActivity {
             outputStream.close();
             inputStream.close();
 
-            return file.getAbsolutePath(); // 👈 acesta va fi noul imageUrl
+            return file.getAbsolutePath();
         } catch (Exception e) {
             e.printStackTrace();
             return "";
         }
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,17 @@ public class AddEditPlayerActivity extends AppCompatActivity {
         editTeam = findViewById(R.id.editTeam);
         editImageUrl = findViewById(R.id.editImageUrl);
         editWikiUrl = findViewById(R.id.editWikiUrl);
+
+        editFullName = findViewById(R.id.editFullName);
+        editAge = findViewById(R.id.editAge);
+        editGames = findViewById(R.id.editGames);
+        editGoals = findViewById(R.id.editGoals);
+        editFoot = findViewById(R.id.editFoot);
+        editShooting = findViewById(R.id.editShooting);
+        editPassing = findViewById(R.id.editPassing);
+        editDribbling = findViewById(R.id.editDribbling);
+        editPhysicality = findViewById(R.id.editPhysicality);
+
         imageSelected = findViewById(R.id.imageSelected);
         Button buttonSelectImage = findViewById(R.id.buttonSelectImage);
         Button buttonSave = findViewById(R.id.buttonSave);
@@ -85,6 +97,16 @@ public class AddEditPlayerActivity extends AppCompatActivity {
             editImageUrl.setText(existingPlayer.imageUrl);
             editWikiUrl.setText(existingPlayer.wikipediaUrl);
 
+            editFullName.setText(existingPlayer.fullName);
+            editAge.setText(String.valueOf(existingPlayer.age));
+            editGames.setText(String.valueOf(existingPlayer.games));
+            editGoals.setText(String.valueOf(existingPlayer.goals));
+            editFoot.setText(existingPlayer.preferredFoot);
+            editShooting.setText(String.valueOf(existingPlayer.shooting));
+            editPassing.setText(String.valueOf(existingPlayer.passing));
+            editDribbling.setText(String.valueOf(existingPlayer.dribbling));
+            editPhysicality.setText(String.valueOf(existingPlayer.physicality));
+
             if (!existingPlayer.imageUrl.isEmpty()) {
                 selectedImageUri = existingPlayer.imageUrl;
                 Glide.with(this).load(existingPlayer.imageUrl).into(imageSelected);
@@ -96,7 +118,6 @@ public class AddEditPlayerActivity extends AppCompatActivity {
             String position = editPosition.getText().toString();
 
             String numberStr = editNumber.getText().toString();
-
             if (numberStr.trim().isEmpty()) {
                 editNumber.setError("Introduceți un număr!");
                 return;
@@ -105,11 +126,21 @@ public class AddEditPlayerActivity extends AppCompatActivity {
             int number = Integer.parseInt(numberStr);
             String nationality = editNationality.getText().toString();
             String team = editTeam.getText().toString();
-            // ⚠️ Folosește linkul din galerie dacă e selectat, altfel textul introdus manual
             String imageUrl = selectedImageUri.isEmpty() ? editImageUrl.getText().toString() : selectedImageUri;
             String wikiUrl = editWikiUrl.getText().toString();
 
-            Player newPlayer = new Player(0, name, position, number, nationality, team, imageUrl, wikiUrl);
+            String fullName = editFullName.getText().toString();
+            int age = Integer.parseInt(editAge.getText().toString());
+            int games = Integer.parseInt(editGames.getText().toString());
+            int goals = Integer.parseInt(editGoals.getText().toString());
+            String foot = editFoot.getText().toString();
+            int shooting = Integer.parseInt(editShooting.getText().toString());
+            int passing = Integer.parseInt(editPassing.getText().toString());
+            int dribbling = Integer.parseInt(editDribbling.getText().toString());
+            int physicality = Integer.parseInt(editPhysicality.getText().toString());
+
+            Player newPlayer = new Player(0, name, position, number, nationality, team, imageUrl, wikiUrl,
+                    foot, age, shooting, dribbling, passing, physicality, games, goals, fullName);
 
             Intent resultIntent = new Intent();
             resultIntent.putExtra("player", newPlayer);
@@ -125,11 +156,8 @@ public class AddEditPlayerActivity extends AppCompatActivity {
 
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
             Uri uri = data.getData();
-
-            selectedImageUri = copyImageToInternalStorage(uri); // 👈 salvăm local
-
+            selectedImageUri = copyImageToInternalStorage(uri);
             Glide.with(this).load(selectedImageUri).into(imageSelected);
         }
     }
-
 }

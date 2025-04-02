@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:background="#0D4679">
+    android:background="#142537">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -119,11 +119,12 @@
         <!-- Buton Wikipedia -->
         <Button
             android:id="@+id/buttonOpenWiki"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Deschide Wikipedia"
-            android:backgroundTint="#4CAF50"
+            android:text="Wikipedia"
+            android:backgroundTint="#ff0d4679"
             android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button"
             android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 </ScrollView>

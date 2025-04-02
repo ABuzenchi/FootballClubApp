@@ -48,7 +48,7 @@
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:text="Players"
-            android:backgroundTint="@null"
+            android:backgroundTint="#ff0d4679"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:background="@drawable/rounded_button"
@@ -58,10 +58,10 @@
             android:id="@+id/buttonManagePlayers"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:backgroundTint="@null"
             android:text="Manage"
-            android:textColor="#FFFFFF"
             android:textSize="16sp"
+            android:backgroundTint="#ff0d4679"
+            android:textColor="#FFFFFF"
             android:background="@drawable/rounded_button"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#1B1B2F"
+    android:background="#142537"
     android:padding="16dp">
 
     <!-- Imagine -->
@@ -135,10 +135,11 @@
     <!-- Buton pentru detalii -->
     <Button
         android:id="@+id/buttonMoreDetails"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View More Info"
+        android:text="More Info"
         android:layout_gravity="center"
-        android:backgroundTint="#FF4E4E"
-        android:textColor="#FFFFFF"/>
+        android:backgroundTint="#ff0d4679"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"/>
 </LinearLayout>

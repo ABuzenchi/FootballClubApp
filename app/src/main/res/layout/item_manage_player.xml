@@ -16,7 +16,7 @@
             android:id="@+id/textPlayerName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nume Jucător"
+            android:text="Name"
             android:textStyle="bold"
             android:textSize="18sp" />
 
@@ -24,7 +24,7 @@
             android:id="@+id/textPlayerDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Poziție - Echipa"
+            android:text="Position - Team"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -37,13 +37,19 @@
                 android:id="@+id/buttonEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Editează" />
+                android:text="Edit"
+                android:backgroundTint="#3F7D58"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/rounded_button" />
 
             <Button
                 android:id="@+id/buttonDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Șterge"
+                android:backgroundTint="#A62C2C"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/rounded_button"
+                android:text="Delete"
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
     </LinearLayout>
