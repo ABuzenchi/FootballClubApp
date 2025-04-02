@@ -34,22 +34,17 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
     @Override
     public void onBindViewHolder(@NonNull PlayerViewHolder holder, int position) {
         Player player = playerList.get(position);
-        Log.d("PLAYER", "Imagine: " + player.imageUrl);
+
         holder.nameText.setText(player.name);
-        holder.positionText.setText(player.position + " - #" + player.number);
+        holder.teamText.setText(player.currentTeam);
+        holder.numberText.setText(String.valueOf(player.number));
 
-        // Imagine din link – folosim Glide (poți adăuga Glide în Gradle)
-        String imageUrl = player.imageUrl;
+        Glide.with(context)
+                .load(player.imageUrl)
+                .placeholder(R.drawable.ic_launcher_foreground)
+                .into(holder.imageView);
 
-        if (imageUrl == null || imageUrl.trim().isEmpty()) {
-            holder.imageView.setImageResource(R.drawable.ic_launcher_foreground); // imagine default
-        } else {
-            Glide.with(holder.itemView.getContext())
-                    .load(imageUrl)
-                    .placeholder(R.drawable.ic_launcher_foreground)
-                    .error(R.drawable.ic_launcher_foreground)
-                    .into(holder.imageView);
-        }
+        // Click pentru detalii, dacă ai deja
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, PlayerDetailActivity.class);
             intent.putExtra("player", player);
@@ -64,13 +59,14 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
 
     static class PlayerViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
-        TextView nameText, positionText;
+        TextView nameText, teamText, numberText;
 
         public PlayerViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imagePlayer);
             nameText = itemView.findViewById(R.id.textPlayerName);
-            positionText = itemView.findViewById(R.id.textPlayerPosition);
+            teamText = itemView.findViewById(R.id.textPlayerTeam);
+            numberText = itemView.findViewById(R.id.textPlayerNumber);
         }
     }
 }

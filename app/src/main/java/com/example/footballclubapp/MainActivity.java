@@ -36,11 +36,6 @@ public class MainActivity extends AppCompatActivity {
         adapter = new PlayerAdapter(this, playerList);
         recyclerView.setAdapter(adapter);
 
-        Button btnManage = findViewById(R.id.buttonManage);
-        btnManage.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, ManagePlayersActivity.class);
-            startActivity(intent);
-        });
     }
 
     @Override
