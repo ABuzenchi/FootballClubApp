@@ -12,9 +12,19 @@ public class Player implements Serializable {
     public String imageUrl;
     public String wikipediaUrl;
 
-    public Player() {}
+    // 🔥 Adăugat pentru detalii extinse
+    public String preferredFoot;
+    public int age;
+    public int shooting;
+    public int dribbling;
+    public int passing;
+    public int physicality;
 
-    public Player(int id, String name, String position, int number, String nationality, String currentTeam, String imageUrl, String wikipediaUrl) {
+    public Player() {
+    }
+
+    public Player(int id, String name, String position, int number, String nationality,
+                  String currentTeam, String imageUrl, String wikipediaUrl) {
         this.id = id;
         this.name = name;
         this.position = position;
@@ -23,5 +33,25 @@ public class Player implements Serializable {
         this.currentTeam = currentTeam;
         this.imageUrl = imageUrl;
         this.wikipediaUrl = wikipediaUrl;
+    }
+
+    // ✅ Poți adăuga un constructor complet dacă vrei să folosești toate câmpurile dintr-un loc
+    public Player(int id, String name, String position, int number, String nationality,
+                  String currentTeam, String imageUrl, String wikipediaUrl,
+                  String preferredFoot, int age, int shooting, int dribbling, int passing, int physicality) {
+        this.id = id;
+        this.name = name;
+        this.position = position;
+        this.number = number;
+        this.nationality = nationality;
+        this.currentTeam = currentTeam;
+        this.imageUrl = imageUrl;
+        this.wikipediaUrl = wikipediaUrl;
+        this.preferredFoot = preferredFoot;
+        this.age = age;
+        this.shooting = shooting;
+        this.dribbling = dribbling;
+        this.passing = passing;
+        this.physicality = physicality;
     }
 }

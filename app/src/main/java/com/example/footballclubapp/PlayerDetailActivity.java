@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -36,6 +37,7 @@ public class PlayerDetailActivity extends AppCompatActivity {
             Glide.with(this).load(player.imageUrl).into(imageView);
 
             buttonMoreDetails.setOnClickListener(v -> {
+                Toast.makeText(PlayerDetailActivity.this, "Deschidem detalii extinse", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(PlayerDetailActivity.this, PlayerMoreDetailsActivity.class);
                 intent.putExtra("player", player);
                 startActivity(intent);
