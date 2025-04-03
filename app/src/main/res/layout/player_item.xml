@@ -29,19 +29,19 @@
             android:id="@+id/textPlayerName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nume"
+            android:text="Name"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_toEndOf="@id/imagePlayer"
             android:layout_marginStart="12dp"
             android:layout_alignTop="@id/imagePlayer" />
 
-        <!-- Echipă -->
+
         <TextView
             android:id="@+id/textPlayerTeam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Echipă"
+            android:text="Current team"
             android:textSize="14sp"
             android:textColor="#777777"
             android:layout_below="@id/textPlayerName"

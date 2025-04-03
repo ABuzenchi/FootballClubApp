@@ -40,7 +40,6 @@ public class Player implements Serializable {
         this.wikipediaUrl = wikipediaUrl;
     }
 
-    // ✅ Poți adăuga un constructor complet dacă vrei să folosești toate câmpurile dintr-un loc
     public Player(int id, String name, String position, int number, String nationality,
                   String currentTeam, String imageUrl, String wikipediaUrl,
                   String preferredFoot, int age, int shooting, int dribbling, int passing, int physicality, int games, int goals,

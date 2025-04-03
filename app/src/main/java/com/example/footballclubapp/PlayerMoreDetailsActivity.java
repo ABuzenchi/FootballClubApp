@@ -29,16 +29,15 @@ public class PlayerMoreDetailsActivity extends AppCompatActivity {
         textMoreAge = findViewById(R.id.textMoreAge);
         textMoreRating = findViewById(R.id.textMoreRating);
 
-        // Inițializări progress bar-uri
         progressSkills = findViewById(R.id.progressSkills);
         progressMental = findViewById(R.id.progressMental);
         progressPhysical = findViewById(R.id.progressPhysical);
         progressShooting = findViewById(R.id.progressShooting);
 
-        // Buton Wikipedia
+
         Button buttonWiki = findViewById(R.id.buttonOpenWiki);
 
-        // Primim jucătorul
+
         Player player = (Player) getIntent().getSerializableExtra("player");
 
         if (player != null) {
@@ -57,7 +56,6 @@ public class PlayerMoreDetailsActivity extends AppCompatActivity {
             progressShooting.setProgress(player.shooting);
         }
 
-        // Deschide Wikipedia
         buttonWiki.setOnClickListener(v -> {
             Intent intent = new Intent(PlayerMoreDetailsActivity.this, PlayerWebActivity.class);
             intent.putExtra("wikipediaUrl", player.wikipediaUrl);

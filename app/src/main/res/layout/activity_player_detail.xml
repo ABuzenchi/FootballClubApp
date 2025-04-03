@@ -5,7 +5,7 @@
     android:background="#142537"
     android:padding="16dp">
 
-    <!-- Imagine -->
+
     <ImageView
         android:id="@+id/imagePlayerDetail"
         android:layout_width="150dp"
@@ -14,7 +14,7 @@
         android:scaleType="centerCrop"
         android:layout_marginBottom="16dp" />
 
-    <!-- Nume și poziție -->
+
     <TextView
         android:id="@+id/textFullNameDetail"
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="12dp" />
 
-    <!-- Statistici -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Informații club -->
+
     <TextView
         android:text="Full Name"
         android:textColor="#CCCCCC"
@@ -132,7 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <!-- Buton pentru detalii -->
+  >
     <Button
         android:id="@+id/buttonMoreDetails"
         android:layout_width="match_parent"

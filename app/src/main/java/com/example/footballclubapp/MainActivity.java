@@ -1,14 +1,8 @@
 package com.example.footballclubapp;
-
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerViewPlayers);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // ✅ Încarcă din JSON salvat, sau inițial din assets
         if (PlayerStorageHelper.dataExists(this)) {
             playerList = PlayerStorageHelper.loadPlayers(this);
         } else {
@@ -41,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        // Reîncarcă din JSON în caz că s-au făcut modificări
         if (playerList != null) {
             playerList.clear();
             playerList.addAll(PlayerStorageHelper.loadPlayers(this));

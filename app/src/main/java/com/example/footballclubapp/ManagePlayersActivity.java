@@ -23,7 +23,6 @@ public class ManagePlayersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_players);
 
-        // TODO: Înlocuiește cu încărcare din XML dacă vrei
         players = PlayerStorageHelper.loadPlayers(this);
         RecyclerView recyclerView = findViewById(R.id.recyclerViewManage);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

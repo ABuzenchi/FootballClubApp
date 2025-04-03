@@ -44,7 +44,6 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
                 .placeholder(R.drawable.ic_launcher_foreground)
                 .into(holder.imageView);
 
-        // Click pentru detalii, dacă ai deja
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, PlayerDetailActivity.class);
             intent.putExtra("player", player);

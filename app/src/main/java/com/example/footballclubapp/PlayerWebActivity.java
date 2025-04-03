@@ -18,7 +18,7 @@ public class PlayerWebActivity extends AppCompatActivity {
 
         String url = getIntent().getStringExtra("wikipediaUrl");
 
-        webView.getSettings().setJavaScriptEnabled(true); // doar dacă e nevoie
+        webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(url);
     }
