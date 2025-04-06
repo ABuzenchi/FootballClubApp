@@ -19,7 +19,6 @@ public class PlayerMoreDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_more_details);
 
-        // Inițializări text
         textName = findViewById(R.id.textMoreName);
         textTeam = findViewById(R.id.textMoreTeam);
         textMorePosition = findViewById(R.id.textMorePosition);

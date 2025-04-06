@@ -119,7 +119,7 @@ public class AddEditPlayerActivity extends AppCompatActivity {
 
             String numberStr = editNumber.getText().toString();
             if (numberStr.trim().isEmpty()) {
-                editNumber.setError("Introduceți un număr!");
+                editNumber.setError("Enter a number!");
                 return;
             }
 
